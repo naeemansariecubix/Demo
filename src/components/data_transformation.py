@@ -7,12 +7,15 @@ from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder,StandardScaler
-
-from src.exception import CustomException
-from src.logger import logging
 import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from src.utils import save_object
+from exception import CustomException
+from logger import logging
+import pandas as pd
+
+
+from utils import save_object
 
 @dataclass
 class DataTransformationConfig:
